@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HubConnection, HubConnectionBuilder, HttpTransportType } from '@aspnet/signalr';
 
 @Component({
   selector: 'app-counter-component',
   templateUrl: './counter.component.html'
 })
-export class CounterComponent {
+export class CounterComponent implements OnInit {
   public currentCount = 0;
   public connection: HubConnection;
 
